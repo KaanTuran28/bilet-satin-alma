@@ -76,7 +76,7 @@ $pdf = new TicketPDF();
 
 $pdf->AddFont('DejaVu','','DejaVuSans.ttf',true);
 $pdf->AddFont('DejaVu','B','DejaVuSans-Bold.ttf',true);
-$pdf->AddFont('DejaVu','I','DejaVuSans-Oblique.ttf',true); 
+$pdf->AddFont('DejaVu','I','DejaVuSans-Oblique.ttf',true);
 
 $pdf->AddPage();
 
