@@ -1,0 +1,97 @@
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --success-color: #198754;
+    --danger-color: #dc3545;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+    --border-color: #dee2e6;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --border-radius: 8px;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+.card {
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    border: none;
+}
+
+.page-auth {
+    background: linear-gradient(135deg, #0d6efd 0%, #6f42c1 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.page-auth .form-floating .form-control {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.page-auth .form-floating .form-control:focus {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.page-auth .card {
+
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.page-bilet-al .container {
+    max-width: 800px;
+}
+
+.page-bilet-al .trip-info h3 {
+    text-decoration: line-through;
+    color: var(--secondary-color);
+    display: inline-block;
+    margin-right: 10px;
+    font-weight: normal;
+}
+.page-bilet-al .trip-info h2.discounted {
+    color: var(--success-color);
+    display: inline-block;
+}
+
+.page-bilet-al .seat-layout {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    max-width: 320px;
+    margin: 30px auto;
+}
+.page-bilet-al .seat {
+    width: 45px; height: 45px; display: flex; justify-content: center; align-items: center;
+    border: 2px solid var(--border-color); border-radius: 8px; cursor: pointer;
+    font-weight: bold; transition: all 0.2s ease;
+}
+.page-bilet-al .seat.aisle { border: none; background: none; cursor: default; }
+.page-bilet-al .seat.sold { background-color: var(--danger-color); color: white; cursor: not-allowed; border-color: var(--danger-color); }
+.page-bilet-al .seat:not(.sold):not(.aisle):hover { transform: scale(1.1); border-color: var(--primary-color); }
+.page-bilet-al .seat.selected { background-color: var(--success-color); color: white; border-color: var(--success-color); transform: scale(1.1); }
+.page-bilet-al .seat-radio { display: none; }
